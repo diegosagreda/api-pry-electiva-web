@@ -13,6 +13,6 @@ class UsuarioSerializer(serializers.ModelSerializer):
         #read_only_fields = ('id')
 class SolicitudSerializer(serializers.ModelSerializer):
     class Meta:
-        model: Solicitud
-        fields = ('id', 'nombre','paciente', 'formula', 'fecha', 'estado')
+        model = Solicitud
+        fields = ('id', 'nombre','paciente', 'formula', 'fecha', 'estado',)
                   
