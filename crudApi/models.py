@@ -11,6 +11,6 @@ class Solicitud(models.Model):
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100)
     paciente = models.CharField(max_length=100)
-    formula = models.CharField(max_length=100)
+    formula = models.CharField(max_length=500)
     fecha = models.DateField(auto_now_add=True)
     estado = models.BooleanField(default=False)
