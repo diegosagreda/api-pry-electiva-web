@@ -1,8 +1,8 @@
 #View set establecer quien puede consultar la informacion de la api
-from .models import Usuario,Solicitud
+from .models import Usuario,Solicitud,Recordatorio
 
 from rest_framework import viewsets, permissions
-from .serializers import UsuarioSerializer,SolicitudSerializer
+from .serializers import UsuarioSerializer,SolicitudSerializer,RecordatorioSerializer
 
 class UsuarioViewSet(viewsets.ModelViewSet):
 
@@ -21,3 +21,12 @@ class SolicitudViewSet(viewsets.ModelViewSet):
     Solicitud.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = SolicitudSerializer
+
+class RecordatorioViewSet(viewsets.ModelViewSet):
+
+    def get_queryset(self):
+        return Recordatorio.objects.all()
+    
+    Recordatorio.objects.all()
+    permission_classes = [permissions.AllowAny]
+    serializer_class = RecordatorioSerializer

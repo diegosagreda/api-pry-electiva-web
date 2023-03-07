@@ -4,3 +4,4 @@ from . import models
 
 admin.site.register(models.Solicitud)
 admin.site.register(models.Usuario)
+admin.site.register(models.Recordatorio)
