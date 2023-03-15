@@ -20,4 +20,4 @@ class SolicitudSerializer(serializers.ModelSerializer):
 class RecordatorioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recordatorio
-        fields = ('id','paciente', 'medicamento', 'intensidad', 'cantidad','estado')
+        fields = ('id','paciente', 'medicamento', 'intensidad', 'cantidad','descripcion','estado')

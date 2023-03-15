@@ -23,4 +23,5 @@ class Recordatorio(models.Model):
     medicamento = models.CharField(max_length=100)
     intensidad = models.CharField(max_length=100)
     cantidad = models.CharField(max_length=100)
+    descripcion = models.CharField(default='',max_length=100)
     estado = models.BooleanField(default=False)
