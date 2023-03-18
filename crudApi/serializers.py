@@ -3,6 +3,7 @@ from rest_framework import serializers
 from .models import Usuario
 from .models import Solicitud
 from .models import Recordatorio
+from .models import Reporte
 
 class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
@@ -21,3 +22,8 @@ class RecordatorioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recordatorio
         fields = ('id','paciente', 'medicamento', 'intensidad', 'cantidad','descripcion','estado')
+
+class ReporteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Reporte
+        fields = ('id','paciente', 'medicamento', 'cantidad', 'fecha','hora', 'estado')

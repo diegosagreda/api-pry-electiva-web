@@ -25,3 +25,12 @@ class Recordatorio(models.Model):
     cantidad = models.CharField(max_length=100)
     descripcion = models.CharField(default='',max_length=100)
     estado = models.BooleanField(default=False)
+
+class Reporte(models.Model):
+    id = models.AutoField(primary_key=True)
+    paciente = models.CharField(max_length=100)
+    medicamento = models.CharField(max_length=100)
+    cantidad = models.CharField(max_length=100)
+    fecha = models.CharField(max_length=100)
+    hora = models.CharField(max_length=100)
+    estado = models.CharField(max_length=100)
